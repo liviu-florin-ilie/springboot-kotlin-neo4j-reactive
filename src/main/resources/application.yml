@@ -1,0 +1,26 @@
+spring:
+  neo4j:
+    database: survey
+    authentication:
+      username: neo4j
+      password: secret1234
+    uri: bolt://localhost:7687
+  application:
+    name: tanzu-kotlin-web-app
+  logging: trace
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          neo4j: DEBUG
